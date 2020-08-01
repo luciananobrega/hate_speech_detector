@@ -1,0 +1,10 @@
+matplotlib
+sklearn
+seaborn
+numpy
+pandas
+jupyter
+nltk
+tweepy
+imbalanced-learn
+pyspellchecker

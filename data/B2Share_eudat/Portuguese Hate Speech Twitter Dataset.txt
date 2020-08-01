@@ -1,0 +1,111 @@
+dcterms:http://purl.org/dc/terms/
+foaf:http://xmlns.com/foaf/0.1/
+ddr:http://dendro.fe.up.pt/ontology/0.1/
+rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+nie:http://www.semanticdesktop.org/ontologies/2007/01/19/nie#
+
+./Portuguese Hate Speech Twitter Dataset
+| +Date Created(dcterms:created) : 2017-07-26T15:33:20.918Z
+| +Extent(dcterms:extent) : 1,10MB
+| +License(dcterms:license) : Creative Commons Attribution Share-Alike
+| +Description(dcterms:description) : Portuguese Hate Speech Twitter Dataset is a dataset of Twitter messages manually annotated for Hate Speech using a hierarchical structure of classes. 5,668 messages were collected on Twitter, from 1,156 distinct users and classified as containing hate speech using a hierarchical structure of classes. A multiclass and multilabel approach was considered. Two different formats of the dataset are provided, plus the hierarchy of classes. The text of the tweets is omitted in this dataset due to the conditions and terms of the Twitter API.
+| +Publisher(dcterms:publisher) : INESC TEC
+| +Title(dcterms:title) : Hate speech dataset annotated for Portuguese
+| +Creator(dcterms:creator) : Paula Fortuna
+| +Format(dcterms:format) : *.CSV
+| +Language(dcterms:language) : EN
+| +Relation(dcterms:relation) : Master's thesis: FORTUNA, Paula (2017). Automatic detection of hate speech in text: an overview of the topic and dataset annotation with hierarchical classes. Porto: Faculdade de Engenharia da Universidade do Porto
+| +Spatial Coverage(dcterms:spatial) : Porto, Portugal
+| +Subject(dcterms:subject) : Hate speech,Automatic detection,Social Network
+| +Type(dcterms:type) : Tweets and classes taxonomy
+| +personal mailbox(foaf:mbox) : paula.fortuna@fe.up.pt
+| +The date of creation of this resource in Dendro(ddr:created) : 2017-12-28T16:02:35.373Z
+| +File Extension(ddr:fileExtension) : folder
+| +Font Awesome Class(ddr:hasFontAwesomeClass) : fa-folder
+| +Human-Readable URI(ddr:humanReadableURI) : http://127.0.0.1:3001/project/hatespeech/data/hate speech folder
+| +Metadata Quality(ddr:metadataQuality) : 0
+| +Last Modified(ddr:modified) : 2017-12-28T16:47:11.355Z
+| +type(rdf:type) : http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement,http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder,http://dendro.fe.up.pt/ontology/0.1/Resource
+| +hasLogicalPart(nie:hasLogicalPart) : /r/file/76a8ccc3-4607-4a3c-81ac-3b883384e74e,/r/file/e9df21c0-588d-438c-a123-9a95a5538006,/r/file/ff3ec916-04c7-4025-87d9-e3f175225d6f,/r/file/5f823edc-bf72-40e5-955e-8f2a8712b92b,/r/file/10de71fe-4168-465d-a1e5-90b920c5ca8f
+| +isLogicalPartOf(nie:isLogicalPartOf) : /r/folder/e0b490aa-6734-442e-ad8b-f489217a0748
+| +title(nie:title) : Portuguese Hate Speech Twitter Dataset
+|--.graph_hierarchical_classes.csv
+   | +Description(dcterms:description) : The classes follow a hierarchical organization. This hierarchy is represented as a Directed Acyclic Graph (DAG) in CSV format with the source (first column, named 'Source') and destiny (second column, named 'Target') nodes. 100 lines.
+   | +Title(dcterms:title) : graph hierarchical classes
+   | +The date of creation of this resource in Dendro(ddr:created) : 2017-12-28T16:03:52.354Z
+   | +File Extension(ddr:fileExtension) : csv
+   | +null(ddr:hasDataContent) : true
+   | +Font Awesome Class(ddr:hasFontAwesomeClass) : fa-file-o
+   | +Human-Readable URI(ddr:humanReadableURI) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a/graph_hierarchical_classes.csv
+   | +Metadata Quality(ddr:metadataQuality) : 0
+   | +Last Modified(ddr:modified) : 2017-12-28T16:38:15.358Z
+   | +type(rdf:type) : http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement,http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject,http://dendro.fe.up.pt/ontology/0.1/Resource
+   | +isLogicalPartOf(nie:isLogicalPartOf) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a
+   | +title(nie:title) : graph_hierarchical_classes.csv
+|--.dataset_dummy_classes.csv
+   | +Description(dcterms:description) : CSV file containing the dataset as a matrix with dummy variables for each class. The first column contains the Twitter ID of each tweet (first column, named 'tweet_id'), plus 79 columns representing all classes, as converted to dummy variables. 5669 lines.
+   | +Title(dcterms:title) : dataset dummy classes
+   | +The date of creation of this resource in Dendro(ddr:created) : 2017-12-28T16:03:52.112Z
+   | +File Extension(ddr:fileExtension) : csv
+   | +Font Awesome Class(ddr:hasFontAwesomeClass) : fa-file-o
+   | +Human-Readable URI(ddr:humanReadableURI) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a/dataset_dummy_classes.csv
+   | +Metadata Quality(ddr:metadataQuality) : 0
+   | +Last Modified(ddr:modified) : 2017-12-28T16:37:03.504Z
+   | +type(rdf:type) : http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement,http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject,http://dendro.fe.up.pt/ontology/0.1/Resource
+   | +isLogicalPartOf(nie:isLogicalPartOf) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a
+   | +title(nie:title) : dataset_dummy_classes.csv
+|--.annotator_classes.csv
+   | +Description(dcterms:description) : CSV file containing the dataset of tweets – represented by Twitter ID (first column, named 'tweet_id'), plus the annotator classification (second column, named 'class'). 5669 lines.
+   | +Title(dcterms:title) : dataset annotator classes
+   | +The date of creation of this resource in Dendro(ddr:created) : 2017-12-28T16:03:51.945Z
+   | +File Extension(ddr:fileExtension) : csv
+   | +null(ddr:hasDataContent) : true
+   | +Font Awesome Class(ddr:hasFontAwesomeClass) : fa-file-o
+   | +Human-Readable URI(ddr:humanReadableURI) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a/annotator_classes.csv
+   | +Metadata Quality(ddr:metadataQuality) : 0
+   | +Last Modified(ddr:modified) : 2017-12-28T16:36:26.138Z
+   | +type(rdf:type) : http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement,http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject,http://dendro.fe.up.pt/ontology/0.1/Resource
+   | +isLogicalPartOf(nie:isLogicalPartOf) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a
+   | +title(nie:title) : annotator_classes.csv
+|--.README.txt
+   | +Description(dcterms:description) : A readme file containing the full description of the "Hate speech dataset annotated for Portuguese"
+   | +The date of creation of this resource in Dendro(ddr:created) : 2017-12-28T16:49:22.823Z
+   | +File Extension(ddr:fileExtension) : txt
+   | +Font Awesome Class(ddr:hasFontAwesomeClass) : fa-file-text-o
+   | +Human-Readable URI(ddr:humanReadableURI) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a/README.txt
+   | +Metadata Quality(ddr:metadataQuality) : 0
+   | +Last Modified(ddr:modified) : 2017-12-28T16:53:12.876Z
+   | +type(rdf:type) : http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement,http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject,http://dendro.fe.up.pt/ontology/0.1/Resource
+   | +isLogicalPartOf(nie:isLogicalPartOf) : /r/folder/bf7dd361-074a-48df-8bfe-9dd986ca710a
+   | +title(nie:title) : README.txt
+
+dcterms:
+ Date Created(created): Date of creation of the resource.
+ Extent(extent): The size or duration of the resource.
+ License(license): A legal document giving official permission to do something with the resource.
+ Description(description): An account of the resource.
+ Publisher(publisher): An entity responsible for making the resource available.
+ Title(title): A name given to the resource.
+ Creator(creator): An entity primarily responsible for making the resource.
+ Format(format): The file format, physical medium, or dimensions of the resource.
+ Language(language): A language of the resource.
+ Relation(relation): A related resource.
+ Spatial Coverage(spatial): Spatial characteristics of the resource.
+ Subject(subject): The topic of the resource.
+ Type(type): The nature or genre of the resource.
+foaf:
+ personal mailbox(mbox): A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.
+ddr:
+ The date of creation of this resource in Dendro(created): null
+ File Extension(fileExtension): The file extension of the file
+ Font Awesome Class(hasFontAwesomeClass): The Font Awesome class of the resource to use in rendering the resource in the Dendro interface. This is a technical property that has little value.
+ Human-Readable URI(humanReadableURI): A human-readable version of the resource in Dendro. May be outdated!, use the non-human-readable URI for a more persistent identifier.
+ Metadata Quality(metadataQuality): An estimate of the quality of the metadata given to the resource, provided by the Dendro platform
+ Last Modified(modified): The last modification data of the resource in Dendro
+ null(hasDataContent): null
+rdf:
+ type(type): The subject is an instance of a class.
+nie:
+ hasLogicalPart(hasLogicalPart): Generic property used to express 'logical' containment relationships between InformationElements. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of InformationElement to use those specific subproperties. Note the difference between 'physical' containment (hasPart) and logical containment (hasLogicalPart)
+ isLogicalPartOf(isLogicalPartOf): Generic property used to express 'logical' containment relationships between DataObjects. NIE extensions are encouraged to provide more specific subproperties of this one. It is advisable for actual instances of InformationElement to use those specific subproperties. Note the difference between 'physical' containment (isPartOf) and logical containment (isLogicalPartOf)
+ title(title): Name given to an InformationElement
