@@ -1,6 +1,9 @@
 """
 Script to get tweet text from tweet ID, got on twitter data set
 (data/B2Share_eudat/twitter_dataset.csv)
+We'll do it with the help of Tweepy, a Python library for accessing the Twitter API.
+We noticed that some tweets or accounts were already deleted (eg.: el 308).
+Thus, we added a try/except to include a 'Null' value. We are going to delete those after.
 """
 
 import pandas as pd
