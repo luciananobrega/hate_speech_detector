@@ -73,11 +73,15 @@ def bag_of_words(text):
     return text
 
 def remove_links(text):
-    text = text.split(' ')
-    for word in text:
+    separated_text = text.split(' ')
+    for word in separated_text:
         if 'http' in word or '.com' in word:
-            text.remove(word)
-    return ' '.join(text)
+            separated_text.remove(word)
+    new_text = ' '.join(separated_text)
+    if new_text == '':
+        return text
+    else:
+        return new_text
 
 def remove_duplicated_letters(text):
     text = text.split(' ')
@@ -130,7 +134,3 @@ def process_text(text):
     text = bag_of_words(text)
     print('bag_of_words: ' + str(text))
     return text
-
-text = "Parabéns deputado Roberto de Lucena .Isso sim é proteger o povo.Se eu pago impostos e esses vão para pagar a... https://t.co/vP703Y3dwQ"
-
-process_text(text)
