@@ -37,4 +37,5 @@ data = full_dataset['data'].apply(process_text2)
 new_data = {'data': data, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
 fulldataset = pd.DataFrame(new_data)
 fulldataset.head()
-print(fulldataset)
+
+fulldataset.to_csv('data\\fulldataset.csv', index=False)

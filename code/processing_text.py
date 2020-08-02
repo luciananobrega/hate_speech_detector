@@ -62,8 +62,13 @@ def lower(text):
     return text.lower()
 
 def remove_punctuation(text):
-    text = [char for char in text if char not in punct]
-    return ''.join(text)
+    new_text = []
+    for char in text:
+        if char in punct:
+            new_text.append(' ')
+        else:
+            new_text.append(char)
+    return ''.join(new_text)
 
 def remove_laughs(text):
     return re.sub(laughs, '', text)
@@ -97,7 +102,8 @@ def remove_duplicated_letters(text):
         else:
             new_word = word
         new_text.append(new_word)
-    return ' '.join(new_text)
+    text = ' '.join(new_text)
+    return text
                 
 def remove_stopwords(text):
     text = text.split(' ')
@@ -123,16 +129,17 @@ def process_text1(text):
     text = remove_duplicated_letters(text)
 
 def process_text2(text):
+    #print('original2: ' + text)
     text = remove_laughs(text)
-
+    #print('remove_laughs: ' + text)
     # remove stopwords and links
     text = remove_stopwords(text)
-
+    #print('remove_stopwords: ' + text)
     #stemming (get words variations)
     text = stemming(text)
-
+    #print('stemming: ' + text)
     # separate into words
     text = bag_of_words(text)
-
+    #print('bag_of_words: ' + text)
     return text
 
