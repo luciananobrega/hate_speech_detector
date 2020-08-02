@@ -34,7 +34,7 @@ misspell = data.apply(count_misspell)
 
 data2 = data.apply(process_text2)
 
-new_data = {'data': data2, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
+new_data = {'data': full_dataset['data'], 'processed_data': data2, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
 fulldataset = pd.DataFrame(new_data)
 fulldataset.head()
 
