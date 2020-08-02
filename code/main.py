@@ -29,12 +29,12 @@ laughs = full_dataset['data'].apply(count_laughs)
 
 data = full_dataset['data'].apply(process_text1)
 
-bad_words = full_dataset['data'].apply(count_bad_words)
-misspell = full_dataset['data'].apply(count_misspell)
+bad_words = data.apply(count_bad_words)
+misspell = data.apply(count_misspell)
 
-data = full_dataset['data'].apply(process_text2)
+data2 = data.apply(process_text2)
 
-new_data = {'data': data, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
+new_data = {'data': data2, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
 fulldataset = pd.DataFrame(new_data)
 fulldataset.head()
 
