@@ -105,7 +105,13 @@ def remove_duplicated_letters(text):
         new_text.append(new_word)
     text = ' '.join(new_text)
     return text
-                
+
+def remove_break_line(text):
+    if '\n' in text:
+        return text.replace('\n', ' ')
+    else:
+        return text
+
 def remove_stopwords(text):
     text = text.split(' ')
     text_without_stopwords = [word for word in text if word not in stopwords] # remove stopwords
@@ -127,6 +133,7 @@ def process_text1(text):
     text = lower(text)
     text = remove_links(text)
     text = remove_punctuation(text)
+    text = remove_break_line(text)
     text = remove_duplicated_letters(text)
     return text
 
