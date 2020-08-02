@@ -13,7 +13,7 @@ laughs = "k{2,}|a*ha+h[ha]*|e*he+h[he]*|s*rs+r[rs]*" # get regex for laughs
 # get file with bad words list
 # Ranzi, C. (2017) “lista-palavroes-bloqueio.txt”.
 #Disponível em: https://pt.scribd.com/document/345921799/lista-palavroes-bloqueio-txt.
-f = open("C:\\Users\\Acer\\Documents\\Studies\\Ciência de Dados e Big Data\\13. TCC\\hate_speech_detector\\data\\lista-palavroes-bloqueio.txt", "r")
+f = open("C:\\Users\\Acer\\Documents\\Studies\\Ciência de Dados e Big Data\\13. TCC\\hate_speech_detector\\data\\lista-palavroes-bloqueio.txt", "r", encoding="utf8")
 list_bad_words = f.readlines()
 list_bad_words = [x.strip() for x in list_bad_words]
 f.close()
@@ -127,6 +127,7 @@ def process_text1(text):
     text = remove_links(text)
     text = remove_punctuation(text)
     text = remove_duplicated_letters(text)
+    return text
 
 def process_text2(text):
     #print('original2: ' + text)
