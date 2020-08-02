@@ -24,24 +24,17 @@ full_dataset =  pd.concat(frames, ignore_index=True)
 from tqdm import tqdm, tqdm_notebook
 #tqdm.pandas(tqdm_notebook)
 
-data = full_dataset['data'].apply(process_text)
-"""
-data = data.apply(remove_punctuation)
+length = full_dataset['data'].apply(len)
+laughs = full_dataset['data'].apply(count_laughs)
 
-length = data.apply(len)
-laughs = data.apply(count_laughs)
+data = full_dataset['data'].apply(process_text1)
 
-data = data.apply(remove_laughs)
+bad_words = full_dataset['data'].apply(count_bad_words)
+misspell = full_dataset['data'].apply(count_misspell)
 
+data = full_dataset['data'].apply(process_text2)
 
-data = data.apply(remove_links)
-
-
-data = data.apply(remove_duplicated_letters)
-
-data = data.apply(remove_stopwords)
-
-data = data.apply(stemming)
-
-data = data.apply(bag_of_words)
-"""
+new_data = {'data': data, 'Hate': full_dataset['Hate.speech'], 'length': length, 'laughs': laughs, 'bad_words': bad_words, 'misspell': misspell}
+fulldataset = pd.DataFrame(new_data)
+fulldataset.head()
+print(fulldataset)

@@ -13,7 +13,7 @@ laughs = "k{2,}|a*ha+h[ha]*|e*he+h[he]*|s*rs+r[rs]*" # get regex for laughs
 # get file with bad words list
 # Ranzi, C. (2017) “lista-palavroes-bloqueio.txt”.
 #Disponível em: https://pt.scribd.com/document/345921799/lista-palavroes-bloqueio-txt.
-f = open("data\\lista-palavroes-bloqueio.txt", "r")
+f = open("C:\\Users\\Acer\\Documents\\Studies\\Ciência de Dados e Big Data\\13. TCC\\hate_speech_detector\\data\\lista-palavroes-bloqueio.txt", "r")
 list_bad_words = f.readlines()
 list_bad_words = [x.strip() for x in list_bad_words]
 f.close()
@@ -45,6 +45,7 @@ def count_laughs(text):
 
 def count_bad_words(text):
     bad = []
+    text = text.split(' ')
     for bad_word in list_bad_words:
         try:
             x = [re.findall('^' + bad_word.lower(), word) for word in text]
@@ -108,29 +109,30 @@ def remove_stopwords(text):
     return ' '.join(text)
 
 def stemming(text):
-    print(text)
     stemmer = nltk.stem.RSLPStemmer() #need to download rslp
     text = stemmer.stem(text)
     return text
 
-def process_text(text):
-    print('original text: ' + text)
+def process_text1(text):
+    """
+    Basic text processing: lower, remove links, punctuations and duplicated letters.
+    """
     text = lower(text)
     text = remove_links(text)
-    print('remove_links: ' + text)
     text = remove_punctuation(text)
-    text = remove_laughs(text)
-    print('remove_laughs: ' + text)
     text = remove_duplicated_letters(text)
-    print('remove_duplicated_letters: ' + text)
+
+def process_text2(text):
+    text = remove_laughs(text)
+
     # remove stopwords and links
     text = remove_stopwords(text)
-    print('remove_stopwords: ' + text)
-    text = remove_links(text)
-    print('remove_links: ' + text)
+
     #stemming (get words variations)
     text = stemming(text)
-    print('stemming: ' + text)
+
+    # separate into words
     text = bag_of_words(text)
-    print('bag_of_words: ' + str(text))
+
     return text
+
