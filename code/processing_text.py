@@ -24,9 +24,10 @@ def is_unknown(word):
 
 def count_misspell(text):
     count = 0
+    text = text.split(' ')
     for word in text:
-        if '#' not in word or '@' not in word or word != 'rt':
-            if is_unknown(word):
+        if '#' not in word and '@' not in word and word != 'rt':
+            if is_unknown(word) and word != '':
                 count += 1
     return count
 
