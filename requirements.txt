@@ -8,3 +8,4 @@ nltk
 tweepy
 imbalanced-learn
 pyspellchecker
+Unidecode
