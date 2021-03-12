@@ -1,4 +1,4 @@
-data,Hate.speech,length,laughs,bad_words,misspell
+data,Hate_speech,length,laughs,bad_words,misspell
 "['com', 'mel', 'mord', 'marimb']",0,32,0,0,1
 "['pint', 'orgulh']",0,28,0,1,0
 "['vê', 'merd', 'crepúscul', 'pra', 'cinebiograf', 'chuck', 'noril']",0,83,0,1,2
